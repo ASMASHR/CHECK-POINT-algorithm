@@ -1,0 +1,43 @@
+ALGORITHM segment_sentence
+ 
+
+   var
+        espace: INTEGER:=0;
+        words: INTEGER:=1;
+        vowel: INTEGER:=0;
+	  	length: INEGER;
+		i: INTEGER;
+		sentence: STRING.
+		
+
+    begin	
+	write("enter a sentence");  
+	read(sentence);
+	length:=sentence.length;
+	IF (sentence[length-1]=".")THEN//verification si le dernier car est un point.
+	{
+		
+		 FOR (i FROM 0 TO length)  DO//parcourrir la chaine 
+			{
+				IF (sentence[i]==" ") THEN
+					{
+						espace:=espace+1;
+						word:=word+1;
+					}
+				END_IF
+		
+				IF ((sentence[i]=="a")  or (sentence[i]=="i") or (sentence[i]=="u") or (sentence[i]=="o") or (sentence[i]=="e") or (sentence[i]=="y")) THEN 
+					{vowel:=vowel+1;}// incrémenter  le nbr des voyelles
+				END_IF
+			}
+		END_FOR
+
+	}
+	ELSE
+		write("the sentence must end with a point");
+	END_IF
+
+		write ("your sentence contain " + espace +"espaces, "+ word + " words  and  " + vowel + "vowels. ");
+
+
+   end
