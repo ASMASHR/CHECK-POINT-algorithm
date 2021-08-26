@@ -2,7 +2,6 @@ ALGORITHM segment_sentence
  
 
    var
-        espace: INTEGER:=0;
         words: INTEGER:=0;
         vowels: INTEGER:=0;
 	length: INEGER;
@@ -21,7 +20,6 @@ ALGORITHM segment_sentence
 			{
 				IF (sentence[i]=" ") THEN
 					{
-						espace:=espace+1;
 						words:=words+1;
 					}
 				END_IF
@@ -37,7 +35,7 @@ ALGORITHM segment_sentence
 		write("the sentence must end with a point");
 	END_IF
 
-		write ("your sentence contain " + espace +"espaces, "+ words + " words  and  " + vowels + "vowels. ");
+		write ("your sentence contain " + length +"caracters, "+ words + " words  and  " + vowels + "vowels. ");
 
 
    end
