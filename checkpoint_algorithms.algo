@@ -16,7 +16,7 @@ ALGORITHM segment_sentence
 	IF (sentence[length-1]=".")THEN //verification si le dernier caractère est un point.
 	{
 		
-		 FOR (i FROM 0 TO length)  DO   //parcourrir la chaine 
+		 FOR (i FROM 0 TO length-1 STEP 1)  DO   //parcourrir la chaine 
 			{
 				IF (sentence[i]=" ") THEN
 					{
